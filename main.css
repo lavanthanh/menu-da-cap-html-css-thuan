@@ -1,0 +1,17 @@
+* { padding: 0; margin: 0; }
+body { font-family: sans-serif; line-height: 24px; font-size: 14px; }
+.t-wrap { width: 960px; margin: auto; }
+nav { background-color: #212121; }
+nav ul li a { color: #ededed; text-decoration: none; }
+nav ul { list-style: none; }
+nav ul li { position: relative; } /*tại sao dùng relative*/
+nav > ul > li { display: inline-block; }
+nav > ul > li > a { display: block; line-height: 40px; padding: 0 15px; }
+/*Submenu*/
+nav ul ul { box-shadow: 1px 1px 0 #000;  width: 200px; background-color: red; position: absolute; top: 110%; left: 0; opacity: 0; visibility: hidden; transition: all 0.3s; z-index: 999; }
+nav ul ul li { line-height: 30px; padding: 0 15px; }
+nav ul ul li:hover { background-color: #212121; }
+/*Hover and show submenu*/
+nav ul li:hover > ul { opacity: 1; visibility: visible; top: 100%; }
+/**/
+nav ul ul ul { top: 0 !important; left: 100%; }
